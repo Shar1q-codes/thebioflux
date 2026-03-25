@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ShieldCheck, Crown, Zap, Leaf, Users, ArrowRight, CheckCircle2, ChevronDown, ChevronUp } from 'lucide-react';
+import primeplusImg from '../assets/primeplus.png';
 
 const benefits = [
   'Enhances physical stamina, strength, and overall vitality',
@@ -174,17 +175,25 @@ export default function ProductSection() {
             }} />
 
             <div style={{ position: 'relative', zIndex: 1 }}>
-              {/* Product icon */}
+              {/* Product image */}
               <div style={{
-                width: '90px', height: '90px',
-                background: 'linear-gradient(135deg, rgba(212,168,67,0.20), rgba(212,168,67,0.08))',
-                border: '2px solid rgba(212,168,67,0.35)',
-                borderRadius: '22px',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
                 marginBottom: '28px',
-                fontSize: '42px',
               }}>
-                &#x1F33F;
+                <img
+                  src={primeplusImg}
+                  alt="PrimePulse Chyawanprash"
+                  style={{
+                    width: '100%',
+                    maxWidth: '320px',
+                    height: 'auto',
+                    objectFit: 'contain',
+                    borderRadius: '16px',
+                    filter: 'drop-shadow(0 12px 32px rgba(0,0,0,0.35))',
+                  }}
+                />
               </div>
 
               <div style={{
